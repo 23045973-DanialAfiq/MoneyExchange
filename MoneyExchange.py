@@ -39,7 +39,10 @@ class MoneyExchange:
                 cnv = input("Enter amount to be converted to SG ($): ")
 
             elif choice == 6:
-                cnv = input("Enter amount to be converted to SG ($): ") 
+                cnv = input("Enter amount to be converted to SG ($): ")
+
+            elif choice == 7:
+                cnv = input("Enter amnount to be converted to SG ($): ")
             else:
                 print("Invalid choice")
 
