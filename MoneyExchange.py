@@ -7,7 +7,7 @@ class MoneyExchange:
         choice = -1
         while not 1 <= choice <= 7:
             print("Money Exchanger")
-            print("1. Convert SG($)")
+            print("1. Convert SG($) to MY(RM)")
             print("2. Convert SG($)")
             print("3. Convert SG($)")
             print("4. Convert --- to SG($)")
