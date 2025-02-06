@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Exchange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        select, input, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Currency Exchange</h2>
+    <div class="container">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+        
+        <label for="from">From:</label>
+        <select id="from">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+        
+        <label for="to">To:</label>
+        <select id="to">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+        
+        <button onclick="convertCurrency()">Convert</button>
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function convertCurrency() {
+            let amount = document.getElementById('amount').value;
+            let from = document.getElementById('from').value;
+            let to = document.getElementById('to').value;
+            let exchangeRates = {
+                "USD": { "EUR": 0.92, "GBP": 0.78, "USD": 1 },
+                "EUR": { "USD": 1.09, "GBP": 0.85, "EUR": 1 },
+                "GBP": { "USD": 1.28, "EUR": 1.17, "GBP": 1 }
+            };
+            
+            let convertedAmount = amount * exchangeRates[from][to];
+            document.getElementById('result').innerText = `Converted Amount: ${convertedAmount.toFixed(2)} ${to}`;
+        }
+    </script>
+</body>
+</html>
+
+<!-- Dockerfile -->
+
+
+<!-- Jenkinsfile -->
